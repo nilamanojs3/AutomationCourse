@@ -26,6 +26,16 @@ public class HandlingLocators extends Base
 		//if any value change in between the buton element the absolute xpath will be incorrect for the button show message.That's why we are not usig Absolute xpath
 		
 		//Relative Xpath--//tagname[@attributename='attributevalue']
+		driver.findElement(By.xpath("//button[@id='button-one']"));//xpath using ID attribute and value
+		driver.findElement(By.xpath("//button[text()='Show Message']"));//using text() method to write the Xpath
+		driver.findElement(By.xpath("//button[@id='button-one' and @type='button']"));//using AND function 
+		driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));//using OR function
+		driver.findElement(By.xpath("//div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));//using parent access method using contains()
+		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));//using Child method
+		driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']"));//using following method
+		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));//using Preceding method
+		driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div"));//using ancestor method
+		driver.findElement(By.xpath("//div[@class='card']//descendant::div"));//using descendant method
 		
 		
 	}
