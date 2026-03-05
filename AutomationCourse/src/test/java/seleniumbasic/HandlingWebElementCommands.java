@@ -18,6 +18,8 @@ public class HandlingWebElementCommands extends Base
 		
 		//click()
 		WebElement showbutton=driver.findElement(By.id("button-one"));//locating SHOW MESSAGE button using ID
+		System.out.println(showbutton.isDisplayed());//checking whether displaying showbutton
+		System.out.println(showbutton.isEnabled());//checking whether enabled showbutton
 		showbutton.click();
 		
 		//getText()-to fetch a text from the webpage
