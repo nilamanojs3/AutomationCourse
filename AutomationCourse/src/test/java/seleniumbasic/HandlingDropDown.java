@@ -31,12 +31,21 @@ public class HandlingDropDown extends Base
     	checkbox.click();
     	System.out.println(checkbox.isSelected());//checking dropdown selected or not before click then o/p is trues
      }
+     
+     public void verifyByRadioButton()
+     {
+    	 driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+    	WebElement radiobutton=driver.findElement(By.xpath("//input[@value='green']"));
+    	radiobutton.click();
+    	System.out.println(radiobutton.isSelected());
+     }
 	public static void main(String[] args) 
 	{
 		HandlingDropDown drop=new HandlingDropDown();
 		drop.browserLaunch();
 		//drop.verifyDropDown();
-		drop.verifyByCheckBox();
+		//drop.verifyByCheckBox();
+		drop.verifyByRadioButton();
 
 	}
 
