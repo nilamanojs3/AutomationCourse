@@ -11,7 +11,7 @@ public class HandlingJSExecutor extends Base
 		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
 		WebElement showmsgbtn=driver.findElement(By.id("button-one"));
 		
-		JavascriptExecutor js=(JavascriptExecutor)driver;
+		JavascriptExecutor js=(JavascriptExecutor)driver;//type casting
 		js.executeScript("arguments[0].click();", showmsgbtn);
 		js.executeScript("window.scrollBy(0,-350)", "");//scroll up negative value else positive ,for left and right change x axis value
 	}
