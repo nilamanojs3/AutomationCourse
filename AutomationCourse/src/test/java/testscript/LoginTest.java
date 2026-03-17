@@ -42,7 +42,7 @@ public class LoginTest extends TestNGBase
 	@Test
 	public void verifyUserLoginwithInvalidUsernameandValidpassword() throws IOException
 	{
-		String usrname=ExcelUtilities.readStringData(1, 0,"LoginPage");
+		String usrname=ExcelUtilities.readStringData(2, 0,"LoginPage");
 		String password=ExcelUtilities.readStringData(2, 1, "LoginPage");
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUsernameField(usrname);
